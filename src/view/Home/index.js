@@ -13,13 +13,13 @@ const Home = () => {
   const [modalShow, setModalShow] = React.useState(false);
  // const [show, setShow] = useState(false);
 
-  const handleShow = () => {
+  // const handleShow = () => {
 
-    if(modalShow) {
-      setModalShow(false);
-    } 
-    else { setModalShow(true)}
-  };
+  //   if(modalShow) {
+  //     setModalShow(false);
+  //   } 
+  //   else { setModalShow(true)}
+  // };
   
 
   const addItemCart = (index) => {
