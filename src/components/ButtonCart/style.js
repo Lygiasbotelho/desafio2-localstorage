@@ -6,13 +6,11 @@ export const NavCart = styled.div`
 `
 
 export const ButtonStyle = styled.button`
-    //text-align: center;
-   // padding: 20px 0;
     width: 60px;
     height: 50px;
     outline: none;
     border: none;
-   // cursor: pointer;
+    background: none;
     
     img{ 
       width: 30px;
@@ -21,9 +19,9 @@ export const ButtonStyle = styled.button`
     span{
       background-color: red;
       border-radius: 50%;
-      min-width: 13px;
+      min-width: 15px;
       min-height: 13px;
-      padding: 3px;
+      padding: 1px 4px;
       margin-left: -5px;
       position: absolute;
       text-align: center;

@@ -29,7 +29,7 @@ export const Container = styled.div`
     }
     .product-content img{
       max-width: 100%;
-      //width: 150px;
+      width: 100px;
       margin: auto;
     }
     

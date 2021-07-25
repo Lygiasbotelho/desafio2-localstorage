@@ -76,6 +76,7 @@ console.log(" Eii show", modalShow);
     </Container>
     <ModalCart  show={modalShow}
         onHide={() => setModalShow(false)}
+        cart={cart}
         />
     </React.Fragment>
   );
