@@ -36,7 +36,7 @@ const ModalCart = (props) => {
 
                 <Container>
                   <Row md={4}>
-                    <Col><img src={element.photo} width="50px" /></Col>
+                    <Col><img src={element.photo} width="50px" alt={element.name}/></Col>
                     <Col xs={6}>
                       <h6>{element.name}</h6>
                     <p>{element.description}</p>
