@@ -1,0 +1,25 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "photo": "https://i.pinimg.com/originals/d0/68/58/d068581eadd98c0b58cbae1ad1b6a424.jpg",
+      "name": "Salto alto",
+      "description": "Salto Alto Fino Festa Social",
+      "price": 150
+    },
+    {
+      "id": 2,
+      "photo": "https://ae01.alicdn.com/kf/HTB1NsN8ngDD8KJjy0Fdq6AjvXXa9/Sapatos-femininos-boca-de-peixe-ver-o-sexy-alta-salto-alto-cor-luta-selvagem-cruz-strap.jpg_640x640.jpgg",
+      "name": "Salto alto",
+      "description": "Sapato femininos verão cor luta selvagem",
+      "price": 130
+    },
+    {
+      "id": 3,
+      "photo": "https://http2.mlstatic.com/D_NQ_NP_715521-MLB43022977280_082020-W.webp",
+      "name": "Salto alto",
+      "description": "Salto Alto meia pata sola vermelha",
+      "price": 180
+    }
+  ]
+}
