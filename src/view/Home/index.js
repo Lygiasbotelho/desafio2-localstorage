@@ -11,36 +11,15 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [modalShow, setModalShow] = React.useState(false);
- // const [show, setShow] = useState(false);
-
-  // const handleShow = () => {
-
-  //   if(modalShow) {
-  //     setModalShow(false);
-  //   } 
-  //   else { setModalShow(true)}
-  // };
-  
+  console.log("Eii data", data);
 
   const addItemCart = (index) => {
- 
-    // let product = [...cart, cart.push(data[index])]
   
-    setCart([...cart, data[index]]);
-    
+    setCart([...cart, data[index]]);  
     const productStore = JSON.stringify(cart);
-      
     localStorage.setItem(`@cart`, productStore);
   
-    console.log("Eii", cart);
-  
   }
-  // const removeItem = (itemToBeDeleted) => {
-  //   setItems(items.filter((item) => itemToBeDeleted !== item));
-  // };
-// const seeCart = () => {
-//   console.log("Eii cliquei");
-// }
 
   useEffect(() => {
     api.get("").then((response) => {
@@ -51,17 +30,13 @@ console.log(" Eii show", modalShow);
   return (
     <React.Fragment>
     <Banner><img src={ImgBanner} alt="banner" width="30px"/></Banner>
-   
-   
     <Container>
-    {/* <ButtonCart onClick={handleShow} count={cart.length} /> */}
     <ButtonCart onClick={() => setModalShow(true)} count={cart.length} />
-    {/* () => setModalShow(true) */}
       <section>
         {data.map((prod, index) => (
           <div className="product-content" key={`product-${index}`}>
             <img
-              src={prod.photo} // width="225"// height="auto"
+              src={prod.photo}
               alt="sapato"
             />
             <div className="description">

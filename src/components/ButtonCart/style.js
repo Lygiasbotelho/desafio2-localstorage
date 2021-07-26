@@ -21,7 +21,7 @@ export const ButtonStyle = styled.button`
       border-radius: 50%;
       min-width: 15px;
       min-height: 13px;
-      padding: 1px 4px;
+      padding: 0 4px;
       margin-left: -5px;
       position: absolute;
       text-align: center;

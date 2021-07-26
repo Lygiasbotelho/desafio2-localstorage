@@ -5,16 +5,22 @@ import './style.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from '../../components/Button';
 import {Container, Row, Col} from 'react-bootstrap'
-//import ModalClient from '../ModalClient';
+import ModalClient from '../ModalClient';
 
 
 
 const ModalCart = (props) => {
 
-  const cart = props.cart;
-  console.log(" Eiii cart peguei", cart);
+  const [modalClient, setModalClient] = React.useState(false);
+
+  const handleClient = () => {
+        setModalClient(true);
+        props.onHide();
+  }
 
   return (
+    <React.Fragment>
+
     <Modal
       {...props}
       size="lg"
@@ -30,7 +36,7 @@ const ModalCart = (props) => {
       <Modal.Body>
     
         <ul className="itemsCart">
-          {cart.map(function (element, index) {
+          {props.cart.map(function (element, index) {
             return (
               <li key={`Item-${index}`} className="itemCart">
 
@@ -62,9 +68,12 @@ const ModalCart = (props) => {
       </Modal.Body>
 
       <Modal.Footer>
-        <Button onClick={props.onHide}>Finalizar compra</Button>
+        <Button onClick={handleClient}>Finalizar compra</Button>
       </Modal.Footer>
     </Modal>
+    <ModalClient show={modalClient} onHide={() => setModalClient(false)}/>
+    </React.Fragment>
+
     // <React.Fragment>
 
     // <Container>
