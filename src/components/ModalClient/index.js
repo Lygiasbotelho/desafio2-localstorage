@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 //import { Container } from "./style";
 import Modal from 'react-bootstrap/Modal'
@@ -28,7 +28,7 @@ const ModalClient= (props) => {
   //const [modalShow, setModalShow] = React.useState(false);
   
 
-  const addClient = (i) => {
+  const addClient = () => {
     //const formCliente = formClient;
   
     setClient([...client, client]);
@@ -47,9 +47,9 @@ const ModalClient= (props) => {
   //     setData(response.data);
   //   });
   // }, []);
-  const handleChange = () => {
-    setClient(props.state.value);
-  }
+  // const handleChange = () => {
+  //   setClient(props.state.value);
+  // }
 //   const handleSubmit = (event) => {
 //     console.log(event.target.elements.formClient.value)
 // }
@@ -198,7 +198,7 @@ const ModalClient= (props) => {
             </Form.Group>
           </Row>
           <div className="d-flex float-right"> 
-          <Button type="submit" onSubmit={(() => this.addClient())}>Concluir Compra</Button>
+          <Button type="submit" onSubmit={(() => addClient())}>Concluir Compra</Button>
 </div>
          
         </Form>
