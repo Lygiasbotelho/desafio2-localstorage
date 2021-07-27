@@ -11,7 +11,6 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
   const [modalShow, setModalShow] = React.useState(false);
-  console.log("Eii data", data);
 
   const addItemCart = (index) => {
   
@@ -26,7 +25,7 @@ const Home = () => {
       setData(response.data);
     });
   }, []);
-console.log(" Eii show", modalShow);
+
   return (
     <React.Fragment>
     <Banner><img src={ImgBanner} alt="banner" width="30px"/></Banner>

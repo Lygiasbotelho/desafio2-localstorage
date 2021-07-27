@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ButtonStyle = styled.button`
   min-height: 40px;
-  /* width: 70%; */
   max-width: 100%;
   background-color: #e10f00;
   border-radius: 0.25rem;

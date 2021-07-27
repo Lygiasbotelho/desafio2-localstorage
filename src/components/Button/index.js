@@ -1,16 +1,14 @@
 import React from "react";
-
 import { ButtonStyle } from "./style";
 
-
-const Button = ({ 
-  onClick, 
+const Button = ({
+  onClick,
   children,
-
-}) => { 
+  type,
+}) => {
 
   return (
-    <ButtonStyle onClick={onClick}> {children}</ButtonStyle>
+    <ButtonStyle onClick={onClick} type={type}> {children}</ButtonStyle>
   );
 
 }

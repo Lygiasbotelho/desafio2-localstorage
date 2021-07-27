@@ -1,16 +1,12 @@
 import React from "react";
-
 import { NavCart, ButtonStyle } from "./style";
 import Cart from "../../assets/cart.png";
 
-
-
 const ButtonCart = ({
-   onClick,
-  // children,
+  onClick,
   count,
 }) => {
-  
+
   return (
     <NavCart>
       <ButtonStyle onClick={onClick}>

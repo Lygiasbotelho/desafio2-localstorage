@@ -1,12 +1,9 @@
 import React from "react";
-
-//import { ModalCart } from "./style";
 import './style.css';
 import Modal from 'react-bootstrap/Modal'
 import Button from '../../components/Button';
-import {Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import ModalClient from '../ModalClient';
-
 
 
 const ModalCart = (props) => {
@@ -14,90 +11,56 @@ const ModalCart = (props) => {
   const [modalClient, setModalClient] = React.useState(false);
 
   const handleClient = () => {
-        setModalClient(true);
-        props.onHide();
+    setModalClient(true);
+    props.onHide();
   }
 
   return (
     <React.Fragment>
 
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    //  className={styles.modal}
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Carrinho de compras
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-    
-        <ul className="itemsCart">
-          {props.cart.map(function (element, index) {
-            return (
-              <li key={`Item-${index}`} className="itemCart">
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Carrinho de compras
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
 
-                <Container>
-                  <Row md={4}>
-                    <Col><img src={element.photo} width="50px" alt={element.name}/></Col>
-                    <Col xs={6}>
-                      <h6>{element.name}</h6>
-                    <p>{element.description}</p>
-                    </Col>
-                    <Col className="price"><p>R$ {element.price}</p></Col>
-                  </Row>
-                </Container>
+          <ul className="itemsCart">
+            {props.cart.map(function (element, index) {
+              return (
+                <li key={`Item-${index}`} className="itemCart">
 
-                {/* <div className="d-flex justify-between">
-                  <div><img src={element.photo} width="50px" /></div>
-                  <div> 
-                    <h6>{element.name}</h6>
-                    <p>{element.description}</p>
-                  </div>
-                  <div> <p>{element.price}</p></div>
-                </div> */}
-              </li>
-            );
-          })}
+                  <Container>
+                    <Row md={4}>
+                      <Col><img src={element.photo} width="50px" alt={element.name} /></Col>
+                      <Col xs={6}>
+                        <h6>{element.name}</h6>
+                        <p>{element.description}</p>
+                      </Col>
+                      <Col className="price"><p>R$ {element.price}</p></Col>
+                    </Row>
+                  </Container>
 
-        </ul>
+                </li>
+              );
+            })}
 
-      </Modal.Body>
+          </ul>
 
-      <Modal.Footer>
-        <Button onClick={handleClient}>Finalizar compra</Button>
-      </Modal.Footer>
-    </Modal>
-    <ModalClient show={modalClient} onHide={() => setModalClient(false)}/>
+        </Modal.Body>
+
+        <Modal.Footer>
+          <Button onClick={handleClient}>Finalizar compra</Button>
+        </Modal.Footer>
+      </Modal>
+      <ModalClient show={modalClient} onHide={() => setModalClient(false)} />
     </React.Fragment>
-
-    // <React.Fragment>
-
-    // <Container>
-    // <div className={showHideCart}>
-    //   <div className="cart">
-    // <div className=" cart-header">
-    //          <h2>Carrinho</h2>
-    //          <span className="close"> x </span>
-    //   </div>
-    //   <div className=" cart-body">
-    //  <p>oiiii loja</p>
-    //   </div>
-    //   <div className=" cart-footer">
-    //   <Button onClick={() => handleShow()}> Finalizar compra</Button>
-
-    //   </div>
-
-    //   </div>
-    // </div>
-    // </Container>
-    //     <ModalClient show={modalClient} onHide={() => setModalClient(false)}/>
-    //     </React.Fragment>
-
-
   );
 };
 
